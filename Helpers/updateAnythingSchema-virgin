@@ -1,0 +1,11 @@
+const mongoose = require('mongoose');
+
+const updateschema = new mongoose.Schema({
+    // Define your schema fields here
+    username: { type: String, required: false },
+    password: { type: String, required: false },
+    bio: { type: String },
+    // Add other fields as necessary
+});
+
+module.exports = mongoose.model('User', updateschema,'User-Collection');
